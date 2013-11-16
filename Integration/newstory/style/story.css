@@ -6,7 +6,10 @@
 }
 
 body {
+    font-family: "Helvetica Neue";
     background: #f0f0f0;
+    letter-spacing: .1em;
+    font-weight: 200;
 }
 
 /**********HEADER***********/
@@ -15,8 +18,6 @@ header {
     width: 100%;
     background: black;
     color: white;
-    font-family: 'Helvetica Neue';
-    font-weight: 200;
 }
 
 header section {
@@ -62,7 +63,7 @@ header section nav ul li a {
 
 /**********FORM ARTICLE**********/
 
-.storyContainer {
+.createContainer {
     box-sizing: border-box;
     width: 960px;
     margin: 0 auto;
@@ -70,80 +71,156 @@ header section nav ul li a {
     background: white;
 }
 
-.storyContainer section.index {
-    box-sizing: border-box;
-    float: left;
-    display: block;
-    margin-right: 60px;
-    width: 70px;
-    height: 300px;
-    background: url('../images/line.jpg') repeat-y top;
-    font-size: 1.5em;
-    font-family: 'Helvetica Neue';
+.createContainer form fieldset.step {
+    background: url("../images/line.jpg") repeat-y top left;
+    background-position: 24px 0;
+    margin-bottom: 60px;
+}
+
+.createContainer form fieldset.step fieldset.innerStep {
+    padding-left: 70px;
+    background: none;
+    margin-bottom: 50px;
     position: relative;
 }
 
-.storyContainer section.index label {
-    position: absolute;
-    top: 120px;
-    left: 0;
-    display: block;
-    box-sizing: border-box;
-    width: 70px;
-    height: 70px;
-    border: 2px solid #9a1805;
+.createContainer form fieldset.step h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.createContainer form fieldset.step h1 em {
+    font-style: normal;
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    border: 3px solid #9a1805;
     border-radius: 50%;
     text-align: center;
-    padding-top: 19px;
     background: white;
+    letter-spacing: 0;
 }
 
-.storyContainer h1 {
-    font-family: 'Helvetica Neue';
-    font-weight: 200;
-    font-size:2em;
-    letter-spacing: 2px;
-}
-
-.storyContainer form  {
+.createContainer form fieldset.step fieldset.innerStep span.curStep {
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 2px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    background: white;
     display: block;
-    margin-top: 60px;
+    font-size: 2em;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    border: 2px solid #9a1805;
+    border-radius: 50%;
 }
 
-.storyContainer form label {
-    font-size: 1.7em;
-    font-family: 'Helvetica Neue';
-    font-weight: 200;
-    letter-spacing: 4px;
-    color: #a0a0a0;
+.createContainer form fieldset.step fieldset.innerStep hr {
+    height: 1px;
+    margin: -0.5em 0;
+    padding: 0;
+    color: #d5a098;
+    background-color: #d5a098;
+    border: 0;
+    margin-right: 180px;
+    margin-bottom: 40px;
+}
+
+
+.createContainer form fieldset.step fieldset.innerStep label {
     display: inline-block;
     width: 250px;
+    font-size: 1.5em;
+    color: #a0a0a0;
+    font-weight: 200;
+}
+
+.createContainer form fieldset.step fieldset.innerStep input[type=text] {
+    width: 340px;
+    vertical-align: middle;
+    margin: 10px 0;
+    font-size: 1.5em;
+    border: 1px solid #d5a098;
+    outline: none;
+    transition:all .2s ease 0s;
+    box-sizing: border-box;
+    padding: 0 2px;
+    line-height: 1.5;
+    color: #a0a0a0;
+}
+
+.createContainer form fieldset.step fieldset.innerStep textarea {
+    vertical-align: middle;
+    font-size: 1.5em;
+    margin: 10px 0;
+    width: 340px;
+    resize:none;
+    height: 100px;
+    border: 1px solid #d5a098;
+    outline: none;
+    transition:all .2s ease 0s;
+    box-sizing: border-box;
+    padding: 0 2px;
+    line-height: 1.5;
+    color: #a0a0a0;
+}
+
+.createContainer form fieldset.step fieldset.innerStep input:focus,  .createContainer form fieldset.step fieldset.innerStep textarea:focus{
+    border-radius: 7px;
+    border: 1px solid #9a1805;
+    color: #000;
+}
+
+.createContainer form fieldset.step a.next {
+    margin-top: 20px;
+    display: block;
+    width: 300px;
+    font-size: 2em;
+    line-height:2;
+    color: white;
+    text-decoration: none;
+    background: #9a1805;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.createContainer form fieldset.step p {
+    text-align: center;
+    font-size: 2em;
+}
+
+.createContainer form fieldset.step p a{
+    display: inline-block;
+    width: 300px;
+    line-height:2;
+    color: white;
+    text-decoration: none;
+    background: #9a1805;
+    height: 70px;
+    border-radius: 10px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.createContainer form fieldset.step p input[type=submit] {
+    display: inline-block;
+    width: 300px;
+    font-size: 1em;
+    font-weight: lighter;
+    color: white;
+    background: #9a1805;
+    border:none;
+    height: 70px;
+    border-radius: 10px;
+    margin: 0 10px;
+    text-align: center;
     vertical-align: top;
 }
 
-.storyContainer form input[type="text"], .storyContainer form textarea {
-    width: 340px;
-    font-size: 1.5em;
-    box-sizing: border-box;
-    border: 1px solid #d5a098;
-    resize:none;
-    font-family: 'Helvetica Neue';
-    font-weight: 200;
-}
-
-.storyContainer form input[type="submit"] {
-    width: 300px;
-    margin: 20px auto;
-    display:block;
-    font-size: 1.5em;
-    padding: 20px;
-    color: white;
-    font-family: 'Helvetica Neue';
-    font-weight: 200;
-    background: #9a1805;
-    border: none;
-    border-radius: 10px;
-}
 /**********FOOTER**********/
 footer {
     width: 100%;

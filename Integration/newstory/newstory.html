@@ -28,25 +28,45 @@
         </section>
     </header>
     
-    <section class="storyContainer">
-        <section>
-            <h1>Create your story</h1>
-            <section class="index">
-                <label>1</label>
-            </section>
-            <form>
-                <label for="title">Title</label>
-                <input type="text" id="title" />
+    <section class="createContainer">
+        <form>
+            <fieldset class="step">
+                <h1><em>1</em> Create your story</h1>
+            
+                <fieldset class="innerStep">
+                    <label for="storyTitle">Title</label>
+                    <input type="text" id="storyTitle" />
                 
-                <label for="summary">Summary</label>
-                <input type="text" id="summary" />
+                    <label for="storySummary">Summary</label>
+                    <input type="text" id="storySummary" />
                 
-                <label for="desc">Description</label>
-                <textarea id="desc"></textarea>
+                    <label for="storyDesc">Description</label>
+                    <textarea id="storyDesc"></textarea>
+                </fieldset>
+            </fieldset>
+            
+            <fieldset class="step">
+                <h1><em>2</em> Describe each step of your journey</h1>
                 
-                <input type="submit" value="Next Step"/>
-            </form>
-        </section>
+                <fieldset class="innerStep">
+                    <span class="curStep">1</span>
+                    
+                    <label for="step1Title">Title</label>
+                    <input type="text" id="step1Title" />
+                
+                    <label for="step1Desc">Description</label>
+                    <textarea id="step1Desc"></textarea>
+                
+                    <label for="step1Location">Location</label>
+                    <input type="text" id="step1Location" />
+                
+                    <label for="step1File">Choose file</label>
+                    <input type="file" id="step1File" />
+                </fieldset>
+                
+                <p><a href="#" class="newStep">Add a step</a> or <input type="submit" value="Publish"></p>
+            </fieldset>
+        </form>
     </section>
     
     <footer>
