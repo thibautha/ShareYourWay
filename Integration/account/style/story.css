@@ -1,0 +1,244 @@
+/**********GLOBAL***********/
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Helvetica Neue";
+    background: #f0f0f0;
+    letter-spacing: .1em;
+    font-weight: 200;
+}
+
+/**********HEADER***********/
+
+header {
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+header section {
+    height: 70px;
+    position: relative;
+}
+
+header section h1{
+    position: absolute;
+    top: 18px;
+    left: 0;
+    display: block;
+    font-size: 2em;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+header section nav {
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+
+header section nav ul {
+    list-style: none;
+}
+
+header section nav ul li:nth-child(2), header section nav ul li:nth-child(3){
+    margin-left: 30px;
+}
+
+header section nav ul li{
+    display: inline-block;
+    
+}
+
+header section nav ul li a {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/**********FORM ARTICLE**********/
+
+hr {
+    height: 1px;
+    padding: 0;
+    color: #bf3333;
+    background-color: #bf3333;
+    border: 0;
+    margin-bottom: 30px;
+}
+
+section.profil {
+    box-sizing: border-box;
+    width: 960px;
+    margin: 0 auto;
+    padding: 60px;
+    background: white;
+}
+
+section.profil h1 {
+    font-size: 2em;
+}
+
+section.profil img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 10px solid #dadada;
+    box-sizing: border-box;
+    border-radius: 50%;
+    float:left;
+    margin-right: 50px;
+}
+
+section.profil article.profilDescription {
+    float: left;
+    width: 360px;
+    margin-right: 50px;
+}
+
+section.profil article.profilDescription h1 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+section.profil article.profilDescription p {
+    font-size: .8em;
+    font-weight: 200;
+    color: #9c9c9c;
+    text-align: justify;
+}
+
+section.profil section.datas {
+    float: left;
+    width: 230px;
+}
+
+section.profil section.datas ul {
+    display: block;
+    margin-bottom: 30px;
+}
+
+section.profil section.datas li {
+    font-size: 1.2em;
+}
+
+section.profil section.datas li.right {
+    float: right;
+    color: #9e0000;
+}
+
+.clearfix {height:1%}
+.clearfix:after {
+	content:".";
+	height:0;
+	line-height:0;
+	display:block;
+	visibility:hidden;
+	clear:both;
+}
+
+section.myStories {
+     position: relative;
+     box-sizing: border-box;
+     width: 960px;
+     margin: 0 auto;
+     padding: 0 60px 60px 60px;
+     background: white;
+}
+
+section.myStories h1 {
+    font-size: 2em;
+}
+
+section.myStories section {
+    width: 45%;
+    height: 275px;
+
+    float:left;
+    margin-bottom: 30px;
+}
+section.myStories section:nth-child(odd){
+    margin-right: 10%;
+}
+
+section.myStories section img {
+    width: 100%;
+    height: 210px;
+    background:#b50303;
+}
+
+section.myStories section span.myStoryLikes {
+    float: right;
+    color: #9b0000;
+}
+
+section.myStories section span.myStoryLikes:after {
+    content:"❤";
+}
+
+section.myStories section h1 {
+    font-size: 1.2em;
+}
+
+section.myStories section span.pictoBike, section.myStories section span.pictoLook, section.myStories section span.pictoEat {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    float:right;
+}
+
+section.myStories section span.pictoBike, section.myStories section span.pictoLook {
+    margin-right: 5px;
+}
+
+section.myStories section span.pictoBike {
+    background: url("../images/pictoBike.png");
+}
+
+section.myStories section span.pictoLook {
+    background: url("../images/pictoLook.png");
+}
+
+section.myStories section span.pictoEat {
+    background: url("../images/pictoEat.png");
+}
+
+section.myStories section h2 {
+    margin-top: 10px;
+    color:#a5a5a5;
+}
+
+section.myStories ul {
+    text-align: center;
+}
+
+section.myStories ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+section.myStories ul a {
+    color: #000000;
+    text-decoration : none;
+}
+
+section.myStories ul a.curStoryPage {
+    color: #a80303;
+    text-decoration: underline;
+}
+
+section.myStories ul a.prevPage, section.myStories ul a.nextPage {
+    color: #a80303;
+}
+
+/**********FOOTER**********/
+footer {
+    width: 100%;
+    height: 300px;
+    background: black;
+}
