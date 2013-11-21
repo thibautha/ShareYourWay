@@ -58,22 +58,30 @@ function toggleTrip() {
 }
 
 
-/*
+
 function geoCode() {
+    var addresses = [
+        "Comédie Française, Paris",
+        "Opéra Garnier, Rue Scribe, Paris",
+        "Fontaine Saint-Michel, Place Saint-Michel, Paris",
+        "Parc des Buttes Chaumont, Rue Botzaris, Paris"
+    ];
+    var geocodes = [];
     var geocoder=new google.maps.Geocoder();
-	geocoder.geocode(
-		{"address":address},
-		function(data,status){
-			if(status=='OK'){
-			    addr = {latitude: data[0].geometry.location.lat(), longitude: data[0].geometry.location.lng()};
-			} 
-			else{
-				addr = null;
-			}
-			console.log("Dans geocode", addr);
-	});
-	console.log("après geocode", addr);
-	return addr;
-}*/
+    
+    for(var i = 0; i < addresses.length; i++) {
+        geocoder.geocode(
+    		{"address":addresses[i]},
+    		function(data,status){
+    			if(status=='OK'){
+    			    geocodes.push({latitude: data[0].geometry.location.lat(), longitude: data[0].geometry.location.lng()});
+    			} 
+    			else{
+    				geocodes.push(null);
+    			}
+    	}); 
+    }
+	setTimeout(function(){console.log(geocodes)},3000);
+}
 
 toggleTrip();
