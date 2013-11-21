@@ -2,6 +2,12 @@ var steps = 1;
 $(".createContainer a.newStep").on("click", function(e){
     e.preventDefault();
     steps++;
+    
+    
+    
+    /******************************* PAS D'ID SUR LES INPUT ET AUTRES CONNERIES, UNE FONCTION AU CLIC SUR LES LABEL QUI FOCUS L'INPUT SUIVANT ! */
+    
+    
     var section = $("<fieldset>").addClass("innerStep");
     //Separator
     var hr = $("<hr>");

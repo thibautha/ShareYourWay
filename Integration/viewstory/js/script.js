@@ -17,10 +17,10 @@ function toggleStep(step) {
 function toggleTrip() {
 
     var addresses=[
-        [47.4076041,0.6691852000000154],
-        [47.8453124, 1.9209160000000338],
-        [48.85946389999999, 2.38627299999996],
-        [48.8518602,2.420284400000014]
+        [48.8719343,2.331766600000037],
+        [48.85325599999999, 2.3438691000000063],
+        [48.8799741, 2.3818407999999636],
+        [48.856614,2.3522219000000177]
     ];
     
     var origin = new google.maps.LatLng(addresses[0][0], addresses[0][1]);
@@ -46,20 +46,20 @@ function toggleTrip() {
 		    mapTypeId: google.maps.MapTypeId.ROADMAP };
     var map = new google.maps.Map(document.querySelector("#map"), settings);
     map.fitBounds(bounds);
-    var display = new google.maps.DirectionsRenderer({map : map});
+    var display = new google.maps.DirectionsRenderer({map : map, markerOptions: {icon: "images/pin.png"}});
     var itinerary = new google.maps.DirectionsService();
     itinerary.route(request, function(response, status){
-				if(status == google.maps.DirectionsStatus.OK){
-        		display.setDirections(response); 
-     		}
+	    if(status == google.maps.DirectionsStatus.OK){
+            display.setDirections(response);
+     	}
    	});
 }
 
 
-
+/*
 function geoCode() {
     var addresses = [
-        "Comédie Française, Paris",
+        "La Comédie Française, Place Colette, Paris",
         "Opéra Garnier, Rue Scribe, Paris",
         "Fontaine Saint-Michel, Place Saint-Michel, Paris",
         "Parc des Buttes Chaumont, Rue Botzaris, Paris"
@@ -80,6 +80,6 @@ function geoCode() {
     	}); 
     }
 	setTimeout(function(){console.log(geocodes)},3000);
-}
+}*/
 
 toggleTrip();
