@@ -1,0 +1,249 @@
+/**********GLOBAL***********/
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Helvetica Neue";
+    background: #f0f0f0;
+    letter-spacing: .1em;
+    font-weight: 200;
+}
+
+/**********HEADER***********/
+
+header {
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+header section {
+    height: 70px;
+    position: relative;
+}
+
+header section h1{
+    position: absolute;
+    top: 18px;
+    font-size: 2em;
+    left: 0;
+    display: block;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+header section nav {
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+
+header section nav ul {
+    list-style: none;
+}
+
+header section nav ul li:nth-child(2), header section nav ul li:nth-child(3){
+    margin-left: 10px;
+}
+
+header section nav ul li{
+    display: inline-block;
+    
+}
+
+header section nav ul li a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/**********STORY HEADING**********/
+section#storyHeader {
+    display: none;
+}
+
+/**********Article**********/
+
+article.container {
+    box-sizing: border-box;
+    background: white;
+    width: 100%;
+    font-family: 'Helvetica Neue';
+}
+
+article.container ul#numericDatas {
+    display: none;
+}
+
+article.container section#map {
+    width: 100%;
+    height: 200px;
+    background: black;
+}
+
+article.container p.article {
+    padding: 5%;
+    color: #847b7b;
+    font-size: .8em;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+
+/**********ARTICLE AUTHOR**********/
+
+article.container section#author {
+    text-align: right;
+    height: 75px;
+    padding: 5%;
+}
+
+article.container section#author img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: black;
+    float: right;
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+article.container section#author h1 {
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+article.container section#author p {
+    vertical-align: middle;
+    font-size: .8em;
+    color: black;
+    font-weight: 200;
+    text-align: right;
+    letter-spacing: 2px;
+}
+
+/**********Menu Steps**********/
+
+section#steps {
+    margin-top: 20px;
+    padding: 5%;
+    position: relative;
+    padding-left: 75px;
+}
+
+section#steps nav.navSteps {
+    width: 45px;
+    float: left;
+    margin-right: 10px;
+    z-index: 10;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+section#steps nav.navSteps ul {
+    background: url('../images/line.jpg') top repeat-y;
+}
+
+section#steps nav.navSteps ul li {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 2px;
+    background: white;
+    box-sizing: border-box;
+}
+
+section#steps nav.navSteps ul li:not(:first-child) {
+    margin-top: 30px;
+}
+
+section#steps nav.navSteps ul li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border: solid 1px #88001f;
+    color: #88001f;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+section#steps nav.navSteps ul li.focused {
+    background: #dfdfdf;
+}
+
+section#steps nav.navSteps ul li.focused a {
+    background: #88001f;
+    color: white;
+}
+
+/**********FOCUSED STEP**********/
+
+section#steps section.step {
+    display: none;
+    padding-top:10px;
+    position: relative;
+}
+
+section#steps section.step.focused {
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+
+section#steps section.step h1 {
+    font-size: 1em;
+    font-family: 'Helvetica Neue';
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+section#steps section.step img {
+    width: 100%;
+    overflow:hidden;
+    max-height: 350px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section#steps section.step p {
+    font-size: .7em;
+    text-align: justify;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+section#steps section.step nav a.next {
+    float: right;
+    margin: 0;
+    vertical-align: bottom;
+}
+
+section#steps section.step nav a {
+    color: #b10000;
+    font-size: .7em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    vertical-align: super;
+}
+
+
+/**********FOOTER**********/
+footer {
+    width: 100%;
+    height: 300px;
+    background: black;
+}
