@@ -1,0 +1,61 @@
+/**********GLOBAL***********/
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Helvetica Neue";
+    background: #f0f0f0;
+    letter-spacing: .1em;
+    font-weight: 200;
+}
+
+/**********HEADER***********/
+
+header {
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+header section {
+    height: 70px;
+    position: relative;
+}
+
+header section h1{
+    position: absolute;
+    top: 18px;
+    font-size: 2em;
+    left: 0;
+    display: block;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+header section nav {
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+
+header section nav ul {
+    list-style: none;
+}
+
+header section nav ul li:nth-child(2), header section nav ul li:nth-child(3){
+    margin-left: 10px;
+}
+
+header section nav ul li{
+    display: inline-block;
+    
+}
+
+header section nav ul li a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}

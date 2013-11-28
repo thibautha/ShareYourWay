@@ -1,0 +1,96 @@
+/**********GLOBAL***********/
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Helvetica Neue";
+    background: #f0f0f0;
+    letter-spacing: .1em;
+    font-weight: 200;
+    min-height: 100%;
+}
+
+/**********HEADER***********/
+
+header {
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+header section {
+    height: 70px;
+    position: relative;
+}
+
+header section h1{
+    position: absolute;
+    top: 18px;
+    left: 0;
+    display: block;
+    font-size: 2em;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+header section nav {
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+
+header section nav ul {
+    list-style: none;
+}
+
+header section nav ul li:nth-child(2), header section nav ul li:nth-child(3){
+    margin-left: 30px;
+}
+
+header section nav ul li{
+    display: inline-block;
+    
+}
+
+header section nav ul li a {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+section#home {
+    height: 100%;
+    background: url('../images/paris.jpg') center no-repeat;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+}
+
+section#home h1 {
+    font-size: 3em;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section#home object {
+    display: block;
+    width: 720px;
+    height: 480px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+section#home a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    background: #a80303;
+    font-size: 2em;
+    border-radius: 5px;
+}
