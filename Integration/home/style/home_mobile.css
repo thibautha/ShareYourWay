@@ -59,3 +59,43 @@ header section nav ul li a {
     text-decoration: none;
     letter-spacing: 1px;
 }
+
+
+section#home {
+    height: 100%;
+    background: url('../images/paris.jpg') center no-repeat;
+    background-size: cover;
+    padding: 5% 5% 20% 5%;
+    text-align: center;
+}
+
+section#home h1 {
+    font-size: 2.5em;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section#home object {
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+section#home object embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section#home a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    background: #a80303;
+    font-size: 2em;
+    border-radius: 5px;
+}
