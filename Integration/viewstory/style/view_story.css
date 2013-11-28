@@ -141,6 +141,22 @@ article.container ul#numericDatas li i {
     margin: 0 10px;
 }
 
+article.container ul#numericDatas li a#share {
+    color: #ba2e2e;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+article.container ul#numericDatas li a#share:before {
+    content: '';
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: url('../images/fb.png');
+    background-size: 40px 40px;
+    vertical-align: -12px;
+}
+
 article.container section#map {
     width: 640px;
     height: 400px;

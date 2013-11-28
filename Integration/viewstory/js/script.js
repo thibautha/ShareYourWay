@@ -55,31 +55,34 @@ function toggleTrip() {
    	});
 }
 
-
-/*
-function geoCode() {
-    var addresses = [
-        "La Comédie Française, Place Colette, Paris",
-        "Opéra Garnier, Rue Scribe, Paris",
-        "Fontaine Saint-Michel, Place Saint-Michel, Paris",
-        "Parc des Buttes Chaumont, Rue Botzaris, Paris"
-    ];
-    var geocodes = [];
-    var geocoder=new google.maps.Geocoder();
-    
-    for(var i = 0; i < addresses.length; i++) {
-        geocoder.geocode(
-    		{"address":addresses[i]},
-    		function(data,status){
-    			if(status=='OK'){
-    			    geocodes.push({latitude: data[0].geometry.location.lat(), longitude: data[0].geometry.location.lng()});
-    			} 
-    			else{
-    				geocodes.push(null);
-    			}
-    	}); 
-    }
-	setTimeout(function(){console.log(geocodes)},3000);
-}*/
-
 toggleTrip();
+
+window.fbAsyncInit = function() {
+	FB.init({
+	    appId  : '268663233280656',
+	    status : true,
+	    cookie : true,
+	    xfbml  : true
+    });
+};
+
+(function(d){
+	var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+	if (d.getElementById(id)) {return;}
+	js = d.createElement('script'); js.id = id; js.async = false;
+	js.src = "//connect.facebook.net/fr_FR/all.js";
+	ref.parentNode.insertBefore(js, ref);
+}(document));
+
+$('#share').click(function(e){
+    e.preventDefault();
+    FB.ui({
+        method: 'feed',
+        name: 'Share Your Way',
+        link: window.location.href,
+        picture: 'http://montenegrotravel.files.wordpress.com/2012/06/montc3a9nc3a9gro-voyage-boussole.jpg?w=732', //Image au hasard
+        caption: 'Partage cette histoire',
+        description: 'Share your way vous permet de créer et de partager vos histoires très facilement.',
+        message: "J'ai aimé cette histoire !"
+    });
+});
